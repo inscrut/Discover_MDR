@@ -5,11 +5,12 @@ Test project, research milandr MDR32F9Q2I
 ## Info
 
 IAR 8.1, CMSIS, SPL
+FreeRTOS v10.2.1
 
 ### Commit
 
-* Init commit;
-* Blink LED;
+* Include FreeRTOS;
+* Blink LED over FreeRTOS;
 
 ### Links
 
@@ -22,3 +23,9 @@ IAR 8.1, CMSIS, SPL
 [Hello World](https://startmilandr.ru/doku.php/prog:start:helloword)
 
 [Materials of Milandr](https://edu.milandr.ru/library/)
+
+[FreeRTOS](https://www.freertos.org/)
+
+[Milandr FreeRTOS include](http://cdeblog.ru/podklyuchaem-freertos-k-milandr)
+
+[Milandr FreeRTOS](http://cdeblog.ru/keil-milandr-freertos-is-simple)
