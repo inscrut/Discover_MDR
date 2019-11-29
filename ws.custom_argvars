@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iarUserArgVars>
+    <group name="fldr" active="true">
+        <variable>
+            <name>MDR_FLD</name>
+            <value>C:\Users\Admin\Documents\TPU\Diplom\Milandr</value>
+        </variable>
+    </group>
+</iarUserArgVars>
