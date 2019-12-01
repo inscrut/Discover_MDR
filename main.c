@@ -11,18 +11,21 @@
 
 #define LED_PORT_CLK    RST_CLK_PCLK_PORTC
 #define LED_PORT        MDR_PORTC
-#define LED_PORT_PIN    PORT_Pin_0
+#define LED_1           PORT_Pin_0
+#define LED_2           PORT_Pin_1
 
 
-void vLed1(void *argument)
+void vLed(void *argument)
 {
-    while(1)
-    {
-        PORT_SetBits(LED_PORT, LED_PORT_PIN);
-        vTaskDelay(1000);
-        PORT_ResetBits(LED_PORT, LED_PORT_PIN);
-        vTaskDelay(1000);
-    }
+  uint32_t _LED = (uint32_t) argument;
+  
+  while(1)
+  {
+    PORT_SetBits(LED_PORT, _LED);
+    vTaskDelay(1000);
+    PORT_ResetBits(LED_PORT, _LED);
+    vTaskDelay(1000);
+  }
 }
 
 int main()
@@ -33,14 +36,15 @@ int main()
 
     PORT_StructInit(&GPIOInitStruct);
 
-    GPIOInitStruct.PORT_Pin        = LED_PORT_PIN;
+    GPIOInitStruct.PORT_Pin        = LED_1 | LED_2;
     GPIOInitStruct.PORT_OE         = PORT_OE_OUT;
     GPIOInitStruct.PORT_SPEED      = PORT_SPEED_SLOW;
     GPIOInitStruct.PORT_MODE       = PORT_MODE_DIGITAL;
 
     PORT_Init(LED_PORT, &GPIOInitStruct);
 
-    xTaskCreate(vLed1, "1", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
+    xTaskCreate(vLed, "L1", configMINIMAL_STACK_SIZE, (void*) LED_1, 1, NULL);
+    xTaskCreate(vLed, "L2", configMINIMAL_STACK_SIZE, (void*) LED_2, 1, NULL);
    
     vTaskStartScheduler();
 }

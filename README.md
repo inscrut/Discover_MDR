@@ -1,6 +1,6 @@
 # Milandr test project
 
-Test project, research milandr MDR32F9Q2I
+Test project, research milandr MDR32F9Q2I.
 
 ## Info
 
@@ -9,8 +9,8 @@ FreeRTOS v10.2.1
 
 ### Commit
 
-* Include FreeRTOS;
-* Blink LED over FreeRTOS;
+* Add second LED pin;
+* Make 2 copy 1 task for blink double LEDs;
 
 ### Links
 
@@ -29,3 +29,5 @@ FreeRTOS v10.2.1
 [Milandr FreeRTOS include](http://cdeblog.ru/podklyuchaem-freertos-k-milandr)
 
 [Milandr FreeRTOS](http://cdeblog.ru/keil-milandr-freertos-is-simple)
+
+[First step FreeRTOS](http://microsin.net/programming/ARM/freertos-part1.html)
