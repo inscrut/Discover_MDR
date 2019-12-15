@@ -9,8 +9,8 @@ FreeRTOS v10.2.1
 
 ### Commit
 
-* Add second LED pin;
-* Make 2 copy 1 task for blink double LEDs;
+* Fix sources;
+* Finish 1 part of microsin.net;
 
 ### Links
 

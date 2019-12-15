@@ -22,9 +22,9 @@ void vLed(void *argument)
   while(1)
   {
     PORT_SetBits(LED_PORT, _LED);
-    vTaskDelay(1000);
+    vTaskDelay(100 / portTICK_RATE_MS);
     PORT_ResetBits(LED_PORT, _LED);
-    vTaskDelay(1000);
+    vTaskDelay(100 / portTICK_RATE_MS);
   }
 }
 
