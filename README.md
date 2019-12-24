@@ -10,7 +10,7 @@ FreeRTOS v10.2.1
 ### Commit
 
 * Fix sources;
-* Finish 1 part of microsin.net;
+* Realize DAC + 2 led blink;
 
 ### Links
 

@@ -2372,6 +2372,9 @@
     <group>
         <name>Driver</name>
         <file>
+            <name>$PROJ_DIR$\SPL\MDR32F9Qx_StdPeriph_Driver\src\MDR32F9Qx_dac.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\SPL\MDR32F9Qx_StdPeriph_Driver\src\MDR32F9Qx_port.c</name>
         </file>
         <file>
